@@ -1,0 +1,83 @@
+body{
+    background-color: rgb(215, 184, 237);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+section{
+    height:100svh;
+    width: 100%;
+    align-content: center;
+}
+
+section.loop{
+    height: 125dvh;
+    align-content: normal;
+}
+
+
+.circulo1{
+    background-color: cornflowerblue;
+    border-radius: 100%;
+    width: 120px;
+    height: auto;
+    aspect-ratio: 1/1;
+
+}
+
+svg {
+  overflow: visible;
+  height: 100%;
+  
+  /* Fix Safari rendering bug */
+  transform: translateZ(0);
+}
+
+#path{
+    stroke-width: 1px;
+    fill: none;
+    stroke:midnightblue; 
+}
+
+#circuloPath{
+    fill: dodgerblue;
+}
+
+#circulo3{
+    background-color: cornflowerblue;
+    border-radius: 100%;
+    width: 120px;
+    height: auto;
+    aspect-ratio: 1/1;
+}
+
+.loop{
+    justify-items: center;
+    justify-content: center;
+}
+
+
+.card{
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    margin: 0 auto;
+    position: relative;
+    transform: translate(0, -50%);
+}
+
+#card1{
+    background-color: tomato;
+}
+
+#card2{
+    background-color: rebeccapurple;
+}
+
+#card3{
+    background-color:royalblue;
+}
