@@ -1,4 +1,13 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    font-family: "Roboto Condensed", sans-serif;
+    /* margin: 0;
+    padding: 0; */
+}
+
+body {
     background-color: rgb(215, 184, 237);
     display: flex;
     justify-content: center;
@@ -6,9 +15,69 @@ body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    margin: 0 0 200px 0;
 }
 
-.corner-data-wrap {  display: grid;
+nav{
+    position: fixed;
+    top: 20px;
+    transform: translate(-50%,0);
+    left: 50%;
+    width: auto;
+    padding: 4px 4px 4px 16px;
+    background-color: rgba(240, 255, 255, 0.25);
+    border-radius: 12px;
+    align-items: center;
+    z-index: 100;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 4px;
+}
+
+nav ul li:first-child{
+    font-weight: 500;
+}
+
+nav ul li a{
+    display: inline-block;
+    color: rgb(30, 30, 30);
+    text-align: center;
+    text-decoration: none;
+    padding: 16px 24px;
+    border-radius: 8px;
+    transition: ease-out 0.3s all;
+}
+
+.corner-data:first-child{
+    display: inline-block;
+    list-style: none;
+    text-decoration: none;
+    pointer-events: all;
+}
+
+.corner-data{
+    color: rgb(57, 53, 56);
+}
+
+nav ul li a:hover, nav ul li a.active{
+    background-color: rgba(240, 255, 255, 0.8);
+}
+
+.corner-data-wrap {  
+    height: 100%;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
   gap: 0px 0px;
@@ -20,6 +89,9 @@ body{
   grid-template-areas:
     ". ."
     ". .";
+}
+.corner-data{
+    padding: 8px;
 }
 
 section{

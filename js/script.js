@@ -1,7 +1,26 @@
 // Toda la documentación de gsap en -> https://gsap.com/docs/v3/
 // Cualquier duda o comentario, se puede acercar a mí por mensaje!
+ let sections = document.querySelectorAll("section");
+    let navLinks = document.querySelectorAll('li a');
+
+    window.onscroll = () => {
+        sections.forEach(section => {
+            let top = window.scrollY;
+            let offset = section.getBoundingClientRect().top + window.scrollY;
+            let height = section.offsetHeight;
+            let id = section.getAttribute('id');
+
+            if(top >= offset && top < offset + height){
+                navLinks.forEach(links =>{
+                    links.classList.remove('active');
+                    document.querySelector('li a[href*=' + id + ']').classList.add('active');
+                })
+            }
+        })
+    }
 
 document.addEventListener("DOMContentLoaded", () => {
+   
     // Esto es un TWEEN .Con esto podemos lograr una animación en su mínima expresión.
     
     gsap.to(".circulo1", { x: 500, duration: 2 })
